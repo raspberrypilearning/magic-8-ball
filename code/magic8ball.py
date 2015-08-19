@@ -17,5 +17,3 @@ futures = ['Signs point to yes',
            ]
 
 print(random.choice(futures))
-
-
