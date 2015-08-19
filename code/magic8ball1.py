@@ -20,7 +20,3 @@ futures = ['Signs point to yes',
            ]
 
 ap.show_message(random.choice(futures), scroll_speed=(0.06))
-
-
-
-
