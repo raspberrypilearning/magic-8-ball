@@ -1,1 +1,1 @@
-In this resource you will make a something do a something so that your something can do something and use something to control the something.
+In this activity you will build your own Magic 8 ball using your Raspberry Pi, a Sense HAT and some Python code. A magic 8 ball is a toy which you ask a closed question to, then shake, and it will give you a prediction. 

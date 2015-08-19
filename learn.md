@@ -1,7 +1,6 @@
-By creating a something with your Raspberry Pi you will learn:
+By coding a Magic 8 ball with your Raspberry Pi you will learn:
 
-- How to set up a Raspberry Pi camera
-- How to use GPIO pins
-- How to create a circuit on a breadboard
-- Controlling GPIO pins with Python code
-- Controlling the camera module with Python code
+- How to display text to a screen and an LED Matrix
+- How to create lists and conditionals in Python
+- How to pick items from a list randonly using the `random.choice` function
+- How to use and program an accerlerometer to detect movement
