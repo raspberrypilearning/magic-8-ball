@@ -101,3 +101,44 @@ Now that you have text outputing to the Python 3 shell window on your computer s
 
 	![](images/step2-code.png)
 
+## Shake to start
+
+Traditional magic 8 balls require the person asking a question to shake it before a reply is given. This can be simulated with a sense HAT using the accelerometer, which measures vibrations and movement. Accelerometers can be found in most smart phones which change the direction of the screen depending on which way you hold the device.
+
+Let's use the acelerometer on the Sense HAT to detect any change to the amount of g-force acting on each of it's axis (x, y and z) before it runs the part of your program that gives a random answer to the user. 
+
+1. First you need to create a continous loop in your code to check the amount of movement of the acceleometer. You can use a `while True:` loop to do this. Underneath your list of replies type:
+
+	```python
+	while True:
+	    x, y, z = ap.get_accelerometer_raw().values()
+	    
+	    x = abs(x)
+		y = abs(y)
+		z = abs(z)
+	``` 
+	
+	*Note that capital leters and indentation are very important in Python. Make sure that you you use 4 spaces to indent after a `:` line.*
+	
+	Using `abs` converts any number into a positvie number which means that it will ignore the  direction of shaking and check for the amount of shake!
+
+1. Now it is time to set a condition in our code that checks to see if the x, y and z access have changed (i.e. it is being moved) before it selects a random reply. If it does not detect movement then a reply will not be given.
+
+	```python
+	if x > 2 or y > 2 or z > 2 :
+	    ap.show_message(random.choice(replies))
+	else:
+	    ap.clear()
+	```        	   
+	The program is checking to see if the axis of x, y and z are greater than the value 2. By changing this value you can change how senstive the program is to movement. If you want someone to have to really shake the Raspberry Pi and sense HAT a lot then use a higher value. 
+
+1. Save your program by pressing **Ctrl + S** on your keyboard.
+
+1. Press **F5** to run and test your program.
+
+	![](images/step3-code.png)
+
+## What's next?
+
+- The text is scrolling using the default colour white. Could you add some code to change the colours? See the [getting started with Astro Pi resource here](https://www.raspberrypi.org/learning/getting-started-with-astro-pi/worksheet/) to help.
+- Could you add sound effects to your program to make it more interesting? 
