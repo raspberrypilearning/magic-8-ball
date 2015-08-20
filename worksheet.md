@@ -141,5 +141,5 @@ Let's use the acelerometer on the Sense HAT to detect any change to the amount o
 ## What's next?
 
 - The text is scrolling using the default colour white. Could you add some code to change the colours? See the [getting started with Astro Pi resource here](https://www.raspberrypi.org/learning/getting-started-with-astro-pi/worksheet/) to help.
-- Can you create a pixel art image of a magic 8 ball to appear on the LED matrix as part of the program? 
+- Can you create a pixel art image of a magic 8 ball to appear on the LED matrix as part of the program? See [drawing shapes and patterns](https://github.com/raspberrypilearning/astro-pi-guide/blob/master/inputs-outputs/led-matrix.md) in this resource.  
 - Could you add sound effects to your program to make it more interesting? 
