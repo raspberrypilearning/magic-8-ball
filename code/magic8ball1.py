@@ -20,7 +20,3 @@ replies = ['Signs point to yes',
            ]
 
 ap.show_message(random.choice(replies), scroll_speed=(0.06))
-
-
-
-
