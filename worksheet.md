@@ -75,10 +75,29 @@ A good way to start your Magic 8 ball program is to first create a text version 
 	print(random.choice(replies))
 	```
 	
-1. Save your code by clicking on **File** and **Save**. Then run your program to test it works by clicking on **Run** and **Run Module**. You should see a similar output in the IDLE 3 sheel window:	
+1. Save your code by clicking on **File** and **Save**. Then run your program to test it works by clicking on **Run** and **Run Module**. You should see a similar output in the IDLE 3 shell window:	
 	
 	![](images/step1-code-output.png) 			
 
 
-## The Next Step
+## Display text on an LED Matrix
+
+Now that you have text outputing to the Python 3 shell window on your computer screen, let's change the code so that the text scrolls across the LED Matrix on your Sense HAT. To do this you will need to use the Astro Pi library and replace the print functions used with an astro pi show mesaage function.
+
+1. Underneath the imported modules section of your code add the following lines:
+
+	```python
+	from astro_pi import AstroPi
+	ap = AstroPi()
+	```
+
+1. Next replace `print` with `ap.show_message` in your code. There are two places where you will need to do this.
+
+1. Save your program by pressing **Ctrl + S** on your keyboard.
+
+1. Press **F5** to run and test your program.
+
+1. You may find that the text is slow to scroll across the LED Matrix on your Raspberry Pi. To speed up the text you can add `scroll_speed=(0.06)` to your text strings like this:
+
+	![](images/step2-code.png)
 
