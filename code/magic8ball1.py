@@ -1,4 +1,4 @@
-# Magic 8 Ball with Astro Pi
+# Magic 8 Ball
 
 import random
 import time
