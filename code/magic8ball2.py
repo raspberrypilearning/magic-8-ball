@@ -30,7 +30,3 @@ while True:
         ap.show_message(random.choice(replies), scroll_speed=(0.06))
     else:
         ap.clear()
-
-
-
-
