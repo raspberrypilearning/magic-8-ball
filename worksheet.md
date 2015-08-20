@@ -2,7 +2,7 @@
 
 In this activity you will build your own Magic 8 ball using your Raspberry Pi, a Sense HAT and some Python code. A magic 8 ball is a toy which you ask a closed question to, then shake, and it will give you a prediction.
 
-In preparation for this resource, attach you Sense HAT to your Raspberry Pi by following [this guide](). 
+In preparation for this resource, attach you Sense HAT to your Raspberry Pi by following [this guide](https://www.raspberrypi.org/learning/astro-pi-guide/assemble.md). 
 
 ## Using IDLE 3 
 
@@ -141,4 +141,5 @@ Let's use the acelerometer on the Sense HAT to detect any change to the amount o
 ## What's next?
 
 - The text is scrolling using the default colour white. Could you add some code to change the colours? See the [getting started with Astro Pi resource here](https://www.raspberrypi.org/learning/getting-started-with-astro-pi/worksheet/) to help.
+- Can you create a pixel art image of a magic 8 ball to appear on the LED matrix as part of the program? 
 - Could you add sound effects to your program to make it more interesting? 
