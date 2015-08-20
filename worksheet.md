@@ -46,9 +46,13 @@ A good way to start your Magic 8 ball program is to first create a text version 
 	*Lists can be named in much the same way as variables; for example, number = [1, 2, 3, 4]. This list called 'number' has four items in it. Your list will contain strings of text that will be displayed on the screen. These strings will be quite long.*
 	
 	To create your list type:
+	
 	```python
-	replies = ['Sign point to yes', 'Without a doubt', 'You may rely on it',]	```
+	replies = ['Sign point to yes', 'Without a doubt', 'You may rely on it',]	
+	```
+	
 	Add as many replies to your list as you like. Make sure that you separate each reply with a comma. You can break up your list onto multiple lines like this to make it easier to read, however this is not required for your program to work:
+	
 	
 	```python
 	replies = ['Signs point to yes',
