@@ -1,4 +1,4 @@
-# Magic 8 Ball with Astro Pi
+# Magic 8 Ball
 
 import random
 import time
@@ -17,5 +17,3 @@ replies = ['Signs point to yes',
            ]
 
 print(random.choice(replies))
-
-
