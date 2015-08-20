@@ -3,10 +3,10 @@
 import random
 import time
 
-print("Shake me to tell you your future")
+print("Ask a question")
 time.sleep(3)
 
-futures = ['Signs point to yes',
+replies = ['Signs point to yes',
            'Without a doubt',
            'You may rely on it',
            'Do not count on it',
@@ -16,4 +16,6 @@ futures = ['Signs point to yes',
            'Outlook not so good'
            ]
 
-print(random.choice(futures))
+print(random.choice(replies))
+
+

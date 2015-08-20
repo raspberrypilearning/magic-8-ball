@@ -11,6 +11,9 @@ A great way to write your code and test it in intervals is to use IDLE 3, a deve
 1. Open a Terminal window by clicking on the **Main Menu**, followed by **Accessories** and then **Terminal**.
 
 	![terminal icon](images/terminal-icon.png)
+	
+1. Type `sudo idle3 &` and press **enter** on the keyboard to lanch IDLE 3 as the super user. This gives you super powers when running your program so that you can control your sense HAT.	
+ 	![](images/launch-idle.png)
 
 1. Once the Python Shell window has loaded, click on **File** and **New Window**. This will open a text editor window in which you can write, save and test your code.
 
@@ -70,31 +73,12 @@ A good way to start your Magic 8 ball program is to first create a text version 
 
 	```python
 	print(random.choice(replies))
+	```
 	
 1. Save your code by clicking on **File** and **Save**. Then run your program to test it works by clicking on **Run** and **Run Module**. You should see a similar output in the IDLE 3 sheel window:	
 	
 	![](images/step1-code-output.png) 			
 
 
-
 ## The Next Step
 
-Now we've done X, we'll do Y.
-
-1. First do A
-
-1. Then do B
-
-1. Now do C in code:
-
-    ```python
-    print("Hello world")
-    ```
-
-    In Python the `print` function is something
-
-1. Now do D
-
-1. Now do Y
-
-Now we have X and Y

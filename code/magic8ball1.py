@@ -6,10 +6,10 @@ from astro_pi import AstroPi
 
 ap = AstroPi()
 
-ap.show_message("Shake me to tell you your future!", scroll_speed=(0.06))
+ap.show_message("Ask a question", scroll_speed=(0.06))
 time.sleep(3)
 
-futures = ['Signs point to yes',
+replies = ['Signs point to yes',
            'Without a doubt',
            'You may rely on it',
            'Do not count on it',
@@ -19,4 +19,8 @@ futures = ['Signs point to yes',
            'Outlook not so good'
            ]
 
-ap.show_message(random.choice(futures), scroll_speed=(0.06))
+ap.show_message(random.choice(replies), scroll_speed=(0.06))
+
+
+
+
