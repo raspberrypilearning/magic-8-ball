@@ -1,4 +1,4 @@
-# Code your own Magic 8 Ball
+# Magic 8 Ball
 
 ![](cover.png)
 
