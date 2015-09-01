@@ -61,14 +61,14 @@ A good way to start your Magic 8 Ball program is to first create a text version 
 	
 	```python
 	replies = ['Signs point to yes',
-		'Without a doubt',
-		'You may rely on it',
-		'Do not count on it',
-		'Looking good',
-		'Cannot predict now',
-		'It is decidedly so',
-		'Outlook not so good'
-                ]
+			'Without a doubt',
+			'You may rely on it',
+			'Do not count on it',
+			'Looking good',
+			'Cannot predict now',
+			'It is decidedly so',
+			'Outlook not so good'
+			]
 	```
 	
 1. Finally, an instruction is needed to select an item from the list at random and then display it on the screen. You can use the `random` library to do this by typing:
