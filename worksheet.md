@@ -61,7 +61,7 @@ A good way to start your Magic 8 Ball program is to first create a text version 
 	
 	```python
 	replies = ['Signs point to yes',
-	           'Without a doubt',
+	       'Without a doubt',
                'You may rely on it',
                'Do not count on it',
                'Looking good',
@@ -89,11 +89,11 @@ Now that you have text outputting to the Python 3 shell window on your screen, l
 1. Underneath the imported modules section of your code, add the following lines:
 
 	```python
-	from astro_pi import AstroPi
-	ap = AstroPi()
+	from sense_hat import SenseHat
+	sh = SenseHat()
 	```
 
-1. Next replace `print` with `ap.show_message` in your code. There are two places where you will need to do this.
+1. Next replace `print` with `sh.show_message` in your code. There are two places where you will need to do this.
 
 1. Save your program by pressing **Ctrl + S** on your keyboard.
 
@@ -113,7 +113,7 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 
 	```python
 	while True:
-	    x, y, z = ap.get_accelerometer_raw().values()
+	    x, y, z = sh.get_accelerometer_raw().values()
 	    
 	    x = abs(x)
 		y = abs(y)
@@ -128,9 +128,9 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 
 	```python
 	if x > 2 or y > 2 or z > 2 :
-	    ap.show_message(random.choice(replies))
+	    sh.show_message(random.choice(replies))
 	else:
-	    ap.clear()
+	    sh.clear()
 	```      
 	
 	The program is checking to see if the axes of x, y and z are greater than the value 2. By changing this value you can change how sensitive the program is to movement. If you want someone to have to really shake the Raspberry Pi and Sense HAT a lot, use a higher value. 
@@ -144,5 +144,5 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 ## What's next?
 
 - The text is scrolling using the default colour white. Could you add some code to change the colours? See the [getting started with Astro Pi resource here](https://www.raspberrypi.org/learning/getting-started-with-astro-pi/worksheet/) to help.
-- Can you create a pixel art image of a Magic 8 Ball to appear on the LED Matrix as part of the program? See [drawing shapes and patterns](https://github.com/raspberrypilearning/astro-pi-guide/blob/master/inputs-outputs/led-matrix.md) in this resource.  
+- Can you create a pixel art image of a Magic 8 Ball to appear on the LED Matrix as part of the program? See [drawing shapes and patterns](https://github.com/raspberrypilearning/astro-pi-guide/blob/master/inputs-outputs/led-matrix.md) in this resource.
 - Could you add sound effects to your program to make it more interesting? 
