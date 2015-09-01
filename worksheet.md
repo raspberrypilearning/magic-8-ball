@@ -61,7 +61,7 @@ A good way to start your Magic 8 Ball program is to first create a text version 
 	
 	```python
 	replies = ['Signs point to yes',
-			'Without a doubt',
+	        'Without a doubt',
                'You may rely on it',
                'Do not count on it',
                'Looking good',
