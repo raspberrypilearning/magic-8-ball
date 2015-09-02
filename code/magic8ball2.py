@@ -29,8 +29,12 @@ while True:
     if x > 2 or y > 2 or z > 2 :
         sh.show_message(random.choice(replies), scroll_speed=(0.06))
     else:
+<<<<<<< HEAD
         sh.clear()
 
 
 
 
+=======
+        ap.clear()
+>>>>>>> origin/master

@@ -1,8 +1,8 @@
-# Code your own Magic 8 Ball
+# Magic 8 Ball
 
 ![](cover.png)
 
-In this activity you will build your own Magic 8 ball using your Raspberry Pi, a Sense HAT and some Python code. A magic 8 ball is a toy which you ask a closed question to, then shake, and it will give you a prediction. 
+In this activity you will build your own Magic 8 Ball using your Raspberry Pi, a Sense HAT, and some Python code. A Magic 8 Ball is a toy which you ask a closed question to, then shake, and it will give you a prediction. 
 
 
 ## Licence

@@ -19,8 +19,12 @@ replies = ['Signs point to yes',
            'Outlook not so good'
            ]
 
+<<<<<<< HEAD
 sh.show_message(random.choice(replies), scroll_speed=(0.06))
 
 
 
 
+=======
+ap.show_message(random.choice(replies), scroll_speed=(0.06))
+>>>>>>> origin/master
