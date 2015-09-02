@@ -2,11 +2,11 @@
 
 import random
 import time
-from astro_pi import AstroPi
+from sense_hat import SenseHat
 
-ap = AstroPi()
+sh = SenseHat()
 
-ap.show_message("Ask a question & shake", scroll_speed=(0.06))
+sh.show_message("Ask a question & shake", scroll_speed=(0.06))
 time.sleep(3)
 
 replies = ['Signs point to yes',
@@ -20,16 +20,16 @@ replies = ['Signs point to yes',
            ]
 
 while True:
-    x, y, z = ap.get_accelerometer_raw().values()
+    x, y, z = sh.get_accelerometer_raw().values()
 
     x = abs(x)
     y = abs(y)
     z = abs(z)
 
     if x > 2 or y > 2 or z > 2 :
-        ap.show_message(random.choice(replies), scroll_speed=(0.06))
+        sh.show_message(random.choice(replies), scroll_speed=(0.06))
     else:
-        ap.clear()
+        sh.clear()
 
 
 
