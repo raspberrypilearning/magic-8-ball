@@ -1,6 +1,6 @@
 # Software installation
 
-Connect your Sense HAT and boot up the Pi.
+Connect your Sense HAT and boot up the Raspberry Pi.
 
 First update and upgrade your system by entering the following commands into a terminal window (while connected to the internet):
 
