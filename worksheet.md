@@ -139,7 +139,7 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 
 1. Press **F5** to run and test your program.
 
-	![](images/step3-code.png)
+	![](images/step-code.png)
 
 ## What's next?
 
