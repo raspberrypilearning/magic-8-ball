@@ -1,9 +1,26 @@
 # Magic 8 Ball
 
-![](cover.png)
+![Magic 8 Ball](cover.png)
 
 In this activity you will build your own Magic 8 Ball using your Raspberry Pi, a Sense HAT, and some Python code. A Magic 8 Ball is a toy which you ask a closed question to, then shake, and it will give you a prediction. 
 
+## Requirements
+
+As well as a Raspberry Pi, the usual peripherals, and an up-to-date SD card you'll also need:
+
+### Hardware
+
+- Sense HAT
+
+### Software
+
+- Sense HAT for Python 3
+
+See [software installation](software.md)
+
+## The worksheet
+
+- Go to the [worksheet](worksheet.md)
 
 ## Licence
 
