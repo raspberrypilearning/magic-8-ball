@@ -1,4 +1,4 @@
-# Make your own Digital Magic 8 Ball
+# Make a Digital Magic 8 Ball
 
 In this activity you will build your own Magic 8 Ball using your Raspberry Pi, a Sense HAT, and some Python code. A Magic 8 Ball is a toy which you ask a closed question to, then shake, and it will give you a prediction.
 
@@ -139,7 +139,7 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 
 1. Press **F5** to run and test your program.
 
-	![](images/step3-code.png)
+	![](images/final-code.png)
 
 ## What's next?
 
