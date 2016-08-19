@@ -6,17 +6,11 @@ In preparation for this resource, attach your Sense HAT to your Raspberry Pi by 
 
 ## Using IDLE 3 
 
-A great way to write your code and test it in intervals is to use IDLE 3, a development application for Python. You will be writing your code in Python 3. You will need to open IDLE 3 in a special way to be able to control your Sense HAT later on.
+A great way to write your code and test it in intervals is to use IDLE 3, a development application for Python. You will be writing your code in Python 3.
 
-1. Open a Terminal window by clicking on the **Main Menu**, followed by **Accessories** and then **Terminal**.
+1. Click on `Menu` > `Programming` > `Python 3 (IDLE)`
 
-	![terminal icon](images/terminal-icon.png)
-	
-1. Type `sudo idle3 &` and press **Enter** on the keyboard to launch IDLE 3 as the super user. This gives you super powers when running your program so that you can control your Sense HAT.	
-
- 	![](images/launch-idle.png)
-
-1. Once the Python shell window has loaded, click on **File** and **New Window**. This will open a text editor window in which you can write, save and test your code.
+1. Once the Python shell window has loaded, click on **File** and **New File**. This will open a text editor window in which you can write, save and test your code.
 
 1. Save the blank file as `magic8ball.py` by clicking on **File** and **Save As**.
 
@@ -25,11 +19,11 @@ A great way to write your code and test it in intervals is to use IDLE 3, a deve
 
 A good way to start your Magic 8 Ball program is to first create a text version of a Magic 8 Ball program. Let's think about what a Magic 8 Ball does. First you ask it a question, before shaking the ball, turning it over and then reading a reply that it has randomly chosen. Therefore, you will need a list of replies and a way of randomly choosing one from the list and displaying that answer on the screen.
 
-1. First you need to import the `random` library and the `time` library. Type the following into your magic8ball.py text file:
+1. First you need to import the `choice` function from the `random` library and the `sleep` function from the `time` library. Type the following into your magic8ball.py text file:
 	
 	```python
-	import random
-	import time
+	from random import choice
+	from time import sleep
 	```
 	
 1. Using the `print` function you can print text to the screen, to the person using your program. Type:
@@ -41,7 +35,7 @@ A good way to start your Magic 8 Ball program is to first create a text version 
 1. Then there needs to be a pause before the program responds with a reply, so that the user can ask a question. You can use the `time` library to ask the program to sleep for a set amount of time, like this:
 
 	```python
-	time.sleep(3)
+	sleep(3)
 	```
 	
 	The program will pause for three seconds. You can change this value to make the time longer or shorter.
@@ -60,40 +54,40 @@ A good way to start your Magic 8 Ball program is to first create a text version 
 	
 	
 	```python
-	replies = ['Signs point to yes',
-			'Without a doubt',
-			'You may rely on it',
-			'Do not count on it',
-			'Looking good',
-			'Cannot predict now',
-			'It is decidedly so',
-			'Outlook not so good'
-			]
+replies = ['Signs point to yes',
+        'Without a doubt',
+        'You may rely on it',
+        'Do not count on it',
+        'Looking good',
+        'Cannot predict now',
+        'It is decidedly so',
+        'Outlook not so good'
+        ]
 	```
 	
 1. Finally, an instruction is needed to select an item from the list at random and then display it on the screen. You can use the `random` library to do this by typing:
 
 	```python
-	print(random.choice(replies))
+	print(choice(replies))
 	```
 	
 1. Save your code by clicking on **File** and **Save**. Then run your program to test it works by clicking on **Run** and **Run Module**. You should see a similar output to this in the IDLE 3 shell window:	
 	
-	![](images/step1-code-output.png) 			
 
+    <iframe src="https://trinket.io/embed/python/c5367eaf39" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ## Display text on an LED Matrix
 
-Now that you have text outputting to the Python 3 shell window on your screen, let's change the code so that the text scrolls across the LED Matrix on your Sense HAT. To do this, you will need to use the Astro Pi library and replace the print functions with an Astro Pi 'show message' function.
+Now that you have text outputting to the Python 3 shell window on your screen, let's change the code so that the text scrolls across the LED Matrix on your Sense HAT. To do this, you will need to use the SenseHat library and replace the print functions with a SenseHat `show_message` function.
 
 1. Underneath the imported modules section of your code, add the following lines:
 
 	```python
 	from sense_hat import SenseHat
-	sh = SenseHat()
+	sense = SenseHat()
 	```
 
-1. Next replace `print` with `sh.show_message` in your code. There are two places where you will need to do this.
+1. Next replace `print` with `sense.show_message` in your code. There are two places where you will need to do this.
 
 1. Save your program by pressing **Ctrl + S** on your keyboard.
 
@@ -101,7 +95,8 @@ Now that you have text outputting to the Python 3 shell window on your screen, l
 
 1. You may find that the text is slow to scroll across the LED Matrix on your Raspberry Pi. To speed up the text you can add `scroll_speed=(0.06)` to your text strings like this:
 
-	![](images/step2-code.png)
+
+    <iframe src="https://trinket.io/embed/python/2324fbff7d" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ## Shake to start
 
@@ -112,14 +107,14 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 1. First you need to create a continuous loop in your code to check the amount of the accelerometer's movement. You can use a `while True:` loop to do this. Underneath your list of replies, type:
 
 	```python
-	while True:
-	    x, y, z = sh.get_accelerometer_raw().values()
-	    
-	    x = abs(x)
-		y = abs(y)
-		z = abs(z)
+    while True:
+        x, y, z = sense.get_accelerometer_raw().values()
+
+        x = abs(x)
+        y = abs(y)
+        z = abs(z)
 	``` 
-	
+
 	*Note that capital letters and indentation are very important in Python. Make sure that you use 4 spaces to indent after a `:` line.*
 	
 	Using `abs` converts any number into a positive number, which means that it will ignore the direction of shaking and check for the amount of shake!
@@ -127,10 +122,10 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 1. Now it is time to set a condition in our code that checks to see if the x, y and z axes have changed (i.e. it is being moved) before it selects a random reply. If it does not detect movement then a reply will not be given.
 
 	```python
-	if x > 2 or y > 2 or z > 2 :
-	    sh.show_message(random.choice(replies))
-	else:
-	    sh.clear()
+    if x > 2 or y > 2 or z > 2 :
+        sense.show_message(choice(replies))
+    else:
+        sense.clear()
 	```      
 	
 	The program is checking to see if the axes of x, y and z are greater than the value 2. By changing this value you can change how sensitive the program is to movement. If you want someone to have to really shake the Raspberry Pi and Sense HAT a lot, use a higher value. 
@@ -139,7 +134,9 @@ Let's use the accelerometer on the Sense HAT to detect any change to the amount 
 
 1. Press **F5** to run and test your program.
 
-	![](images/final-code.png)
+
+    <iframe src="https://trinket.io/embed/python/0a790ae3bc" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
 
 ## What next?
 
