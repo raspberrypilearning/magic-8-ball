@@ -4,7 +4,9 @@ In this activity you will build your own Magic 8 Ball using your Raspberry Pi, a
 
 In preparation for this resource, attach your Sense HAT to your Raspberry Pi by following [this guide](https://www.raspberrypi.org/learning/astro-pi-guide/assemble.md). 
 
-## Using IDLE 3 
+If you do not have a Raspberry Pi and Sense HAT then you can use [the Sense HAT emulator here](https://trinket.io/sense-hat) or use the embedded sense HAT emulator windows beneath each step in this activity. 
+
+## Using IDLE 3 on Raspberry Pi 
 
 A great way to write your code and test it in intervals is to use IDLE 3, a development application for Python. You will be writing your code in Python 3.
 
@@ -14,6 +16,14 @@ A great way to write your code and test it in intervals is to use IDLE 3, a deve
 
 1. Save the blank file as `magic8ball.py` by clicking on **File** and **Save As**.
 
+## Using the Sense HAT emulator
+
+If you do not have a Raspberry Pi and Sense HAT then you can write your code and test it in intervals using the Sense HAT emulator. 
+
+1. Visit [trinket.io/sensehat](https://trinket.io/sense-hat) to access the emulator.
+1. Delete all the text in the code window so that you have a blank file to work with.
+1. Follow the instructions in this activity and type your code into the emulator. 
+1. To save your work, you will need to create an account on Trinket. 
 
 ## Printing replies to the screen randomly
 
