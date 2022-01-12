@@ -16,13 +16,15 @@ hardware: sense-hat
 software: python
 version: 3
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
+  completion: engaged
 - title: Make a Digital Magic 8 Ball
 - title: 'Using IDLE 3 on Raspberry Pi '
 - title: Using the Sense HAT emulator
 - title: Printing replies to the screen randomly
 - title: Display text on an LED Matrix
+  completion: internal
 - title: Shake to start
 - title: What next?
